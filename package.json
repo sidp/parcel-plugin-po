@@ -1,0 +1,29 @@
+{
+  "name": "@sidp/parcel-plugin-po",
+  "version": "0.1.0",
+  "description": "Import PO files in Parcel.",
+  "main": "src/index.js",
+  "author": {
+    "name" : "Peter Simonsson",
+    "email" : "peter@simonsson.com.com",
+    "url" : "https://simonsson.com/"
+  },
+  "license": "MIT",
+  "keywords": [
+    "parcel",
+    "plugin",
+    "po"
+  ],
+  "bugs": {
+    "url": "https://github.com/sidp/parcel-plugin-po/issues"
+  },
+  "homepage": "https://github.com/sidp/parcel-plugin-po",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sidp/parcel-plugin-po.git"
+	},
+  "dependencies": {
+    "parcel-bundler": "^1.10.3",
+    "po2json": "^1.0.0-alpha"
+  }
+}
