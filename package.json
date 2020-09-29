@@ -1,12 +1,12 @@
 {
   "name": "@sidp/parcel-plugin-po",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Import PO files in Parcel.",
   "main": "src/index.js",
   "author": {
-    "name" : "Peter Simonsson",
-    "email" : "peter@simonsson.com.com",
-    "url" : "https://simonsson.com/"
+    "name": "Peter Simonsson",
+    "email": "peter@simonsson.com",
+    "url": "https://simonsson.com/"
   },
   "license": "MIT",
   "keywords": [
