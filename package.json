@@ -21,8 +21,11 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/sidp/parcel-plugin-po.git"
-	},
+  },
   "dependencies": {
+    "commander": "^6.0.0",
+    "gettext-parser": "2.0.0",
+    "gettext-to-messageformat": "0.3.1",
     "parcel-bundler": "^1.10.3",
     "po2json": "^1.0.0-alpha"
   }

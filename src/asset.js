@@ -1,31 +1,20 @@
 const { Asset } = require('parcel-bundler');
+const serializeObject = require('parcel-bundler/src/utils/serializeObject')
 const po2json = require('po2json');
 
 class PoAsset extends Asset {
-	constructor(name, pkg, options) {
-		super(name, pkg, options);
-		this.type = 'json';
+	type = 'js';
+
+	async parse(code) {
+		// po2json doesn't have a config file, so let's skip this for now.
+		// const config = await this.getConfig([], { packageKey: 'po' });
+		return po2json.parse(code, {
+			format: 'mf',
+		});
 	}
 
 	async generate() {
-		// po2json doesn't have a config file, so let's skip this for now.
-		// const config = await this.getConfig([], { packageKey: 'po' });
-
-		const parsed = po2json.parse(this.contents, {
-			format: 'mf',
-		});
-
-		return [
-			{
-				type: 'json',
-				value: parsed,
-			},
-			{
-				type: 'js',
-				value: `module.exports = ${JSON.stringify(parsed)}`,
-				sourceMap: undefined,
-			},
-		];
+		return serializeObject(this.ast);
 	}
 }
 
